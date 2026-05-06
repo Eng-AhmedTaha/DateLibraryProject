@@ -166,7 +166,7 @@ public:
 
 	static short NumberOfDaysInAYear(short Year)
 	{
-		return  isLeapYear(Year) ? 365 : 364;
+		return  isLeapYear(Year) ? 366 : 365;
 	}
 
 	short NumberOfDaysInAYear()
@@ -201,7 +201,7 @@ public:
 
 	int NumberOfSecondsInAYear()
 	{
-		return  NumberOfSecondsInAYear();
+		return  NumberOfSecondsInAYear(_Year);
 	}
 
 	static short NumberOfDaysInAMonth(short Month, short Year)
@@ -708,7 +708,7 @@ public:
 
 	void IncreaseDateByXYears(short Years)
 	{
-		IncreaseDateByXYears(Years);
+		IncreaseDateByXYears(Years,*this);
 	}
 
 	clsDate IncreaseDateByOneDecade(clsDate& Date)
